@@ -3,7 +3,6 @@
     "allowJs": true,
     "declaration": false,
     "esModuleInterop": true,
-    "isolatedModules": true,
     "lib": ["ES2021"],
     "module": "es6",
     "moduleResolution": "node",
@@ -13,6 +12,5 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es5"
-  },
-  "include": ["src/**/*"]
+  }
 }
