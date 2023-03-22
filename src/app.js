@@ -1,4 +1,5 @@
 const { App } = require("@slack/bolt");
+import { defaultUserPrefs } from "./config";
 
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
@@ -15,4 +16,10 @@ const app = new App({
 
 app.message("ping", async ({ message, say }) => {
   await say(`Hey there <@${message.user}>!`);
+});
+
+app.message("done for the day", async () => {
+  await app.client.users.profile.set((user = defaultUserPrefs.userId));
+
+  await say("I've set you to away. Have a nice evening!");
 });

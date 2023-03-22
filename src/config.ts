@@ -16,8 +16,16 @@ type userOptions = {
   endWork: number;
 };
 
-export const defaultUserPrefs = {
+export const defaultUserPrefs: userOptions = {
   userId: "U04PWADG2TE",
   startWork: 9,
   endWork: 17,
+};
+
+export const awayStatusMsg = {
+  profile: {
+    status_text: "Offline",
+    status_emoji: ":crescent_moon:",
+    status_expiration: 1532627506,
+  },
 };
